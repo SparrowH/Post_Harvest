@@ -5,7 +5,7 @@ import HeroImages from '../assets/HeroImages.png';
 function Hero() {
   return (
     <section 
-      className="h-screen flex items-center px-10 grid grid-cols-2 bg-cover bg-center" 
+      className="h-screen flex items-center px-20 grid grid-cols-2 bg-cover bg-center" 
       style={{ backgroundImage: `url(${HeroImage})` }}
     >
      
@@ -32,7 +32,7 @@ function Hero() {
       </div>
 
       {/* Right Image */}
-      <div className="flex justify-center">
+      <div className="flex justify-end">
         <img src={HeroImages} alt="Hero Images" className="max-w-md" />
       </div>
     </section>

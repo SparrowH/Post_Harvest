@@ -8,7 +8,7 @@ function Hero() {
       className="h-screen flex items-center px-20 grid grid-cols-2 bg-cover bg-center" 
       style={{ backgroundImage: `url(${HeroImage})` }}
     >
-     
+      
       <div className="max-w-xl">
         <div className="w-full bg-gradient-to-r from-dark-green to-yellow-green bg-clip-text">
           <p className="font-semibold text-2xl tracking-wider text-[#9D9F0D]">CROP CARE SOLUTIONS</p>

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import QuickLinks from './components/QuickLinks'
 import AboutUs from './components/AboutUs'
+import StorageTips from './components/StorageTips'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Hero/>
       <QuickLinks/>
       <AboutUs/>
+      <StorageTips/>
     </div>
   )
 }

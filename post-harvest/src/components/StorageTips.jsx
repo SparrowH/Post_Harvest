@@ -23,16 +23,16 @@ function StorageTips() {
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center">
-        <button onClick={() => navigate('/tomato')} className="w-full max-w-sm">
+        <button onClick={() => navigate('/tomato')} className="w-full max-w-sm cursor-pointer">
           <img className="w-full h-auto rounded-md" src={tomato} alt="Tomato card" />
         </button>
-        <button onClick={() => navigate('/maize')} className="w-full max-w-sm ">
+        <button onClick={() => navigate('/maize')} className="w-full max-w-sm cursor-pointer ">
           <img className="w-full h-auto rounded-md" src={maize} alt="Maize card" />
         </button>
-        <button onClick={() => navigate('/onion')} className="w-full max-w-sm">
+        <button onClick={() => navigate('/onion')} className="w-full max-w-sm cursor-pointer">
           <img className="w-full h-auto rounded-md" src={onion} alt="Onion card" />
         </button>
-        <button onClick={() => navigate('/yams')} className="w-full max-w-sm">
+        <button onClick={() => navigate('/yams')} className="w-full max-w-sm cursor-pointer">
           <img className="w-full h-auto rounded-md" src={yams} alt="Yams card" />
         </button>
       </div>

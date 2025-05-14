@@ -6,7 +6,7 @@ export default function SearchBar() {
       <FiSearch className="text-gray-400 text-xl mr-2" />
       <input 
         type="text" 
-        placeholder="Search location or crop type..." 
+        placeholder="Search storage locations..." 
         className="flex-1 border-none outline-none text-gray-700 text-[20px] placeholder-gray-400 bg-transparent"
       />
     </div>

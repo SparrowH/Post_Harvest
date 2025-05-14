@@ -8,6 +8,9 @@ import StorageTips from './components/StorageTips';
 import StorageLocations from './components/StorageLocations';
 import Testimonial from './components/Testimonial';
 import Footer from './components/Footer';
+import Login from './pages/Login';
+import Register from './pages/Register'
+
 
 // Detail pages
 import TomatoDetails from './pages/TomatoDetails';
@@ -39,6 +42,8 @@ function App() {
         <Route path="/maize" element={<MaizeDetails />} />
         <Route path="/onion" element={<OnionDetail />} />
         <Route path="/yams" element={<YamsDetails />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </Router>
   );

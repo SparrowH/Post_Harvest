@@ -26,10 +26,10 @@ function Hero() {
 
           {/* Buttons */}
           <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 justify-center md:justify-start">
-            <button className="px-6 py-3 bg-gradient-to-r from-yellow-green to-dark-green rounded-full text-white text-base md:text-lg font-medium">
+            <button className="px-6 py-3 bg-gradient-to-r from-yellow-green to-dark-green rounded-full text-white text-base md:text-lg font-medium cursor-pointer">
               Learn Storage Techniques
             </button>
-            <a href="#" className="text-base md:text-lg text-[#13595B] font-medium">
+            <a href="#storagecenters" className="text-base md:text-lg text-[#13595B] font-medium cursor-pointer">
               Find Storage Facilities
             </a>
           </div>

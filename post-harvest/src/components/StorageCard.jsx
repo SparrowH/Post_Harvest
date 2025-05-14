@@ -42,7 +42,7 @@ export default function StorageCard({ imageUrl, title, rating, capacity, locatio
         </div>
 
         <button className="w-full bg-green-700 text-white py-2 rounded-full text-sm mb-2 hover:bg-green-800">
-          View Details
+          Contact Us 
         </button>
         
         <button className="w-full border border-green-600 text-green-600 py-2 rounded-full text-sm hover:bg-green-50">

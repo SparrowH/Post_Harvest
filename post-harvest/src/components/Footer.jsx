@@ -1,7 +1,7 @@
 import logo from '../assets/Logo.png'
 export default function Footer() {
     return (
-      <footer className="bg-green-900 text-gray-300 px-6 py-10">
+      <footer className="bg-green-900 text-gray-300 px-6 py-10 flex justify-center item-center">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           
           {/* Left - Logo and Description */}

@@ -5,35 +5,40 @@ import HeroImages from '../assets/HeroImages.png';
 function Hero() {
   return (
     <section 
-      className="h-screen flex items-center px-20 grid grid-cols-2 bg-cover bg-center" 
+      className="w-full bg-cover bg-center px-6 py-16 md:py-24"
       style={{ backgroundImage: `url(${HeroImage})` }}
     >
-      
-      <div className="max-w-xl">
-        <div className="w-full bg-gradient-to-r from-dark-green to-yellow-green bg-clip-text">
-          <p className="font-semibold text-2xl tracking-wider text-[#9D9F0D]">CROP CARE SOLUTIONS</p>
-          <p className="font-bold text-5xl text-transparent bg-clip-text">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+        
+        {/* Left Side */}
+        <div className="text-center md:text-left">
+          <p className="font-semibold text-xl md:text-2xl tracking-wider text-[#9D9F0D]">
+            CROP CARE SOLUTIONS
+          </p>
+
+          <p className="font-bold text-3xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-dark-green to-yellow-green mt-2">
             Reduce Post-Harvest Losses, Improve Your Profits!
           </p>
-          <p className="text-lg text-gray-600 mt-4">
+
+          <p className="text-base md:text-lg text-gray-700 mt-4">
             Learn the best crop storage techniques, connect with experts, and find nearby storage solutions.
           </p>
+
+          {/* Buttons */}
+          <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 justify-center md:justify-start">
+            <button className="px-6 py-3 bg-gradient-to-r from-yellow-green to-dark-green rounded-full text-white text-base md:text-lg font-medium">
+              Learn Storage Techniques
+            </button>
+            <a href="#" className="text-base md:text-lg text-[#13595B] font-medium">
+              Find Storage Facilities
+            </a>
+          </div>
         </div>
 
-        {/* Buttons */}
-        <div className="mt-10 flex items-center space-x-6">
-          <button className="px-8 py-4 bg-gradient-to-r from-yellow-green to-dark-green rounded-full text-white text-lg font-medium">
-            Learn Storage Techniques
-          </button>
-          <a href="" className="text-lg  text-[#13595B] font-medium">
-            Find Storage Facilities
-          </a>
+        {/* Right Image */}
+        <div className="flex justify-center md:justify-end">
+          <img src={HeroImages} alt="Hero Visual" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg" />
         </div>
-      </div>
-
-      {/* Right Image */}
-      <div className="flex justify-end">
-        <img src={HeroImages} alt="Hero Images" className="max-w-md" />
       </div>
     </section>
   );

@@ -1,33 +1,53 @@
-import React, { useState } from 'react'
-import logo from '../assets/Logo.png'
+import React, { useState } from 'react';
+import logo from '../assets/Logo.png';
+import { Menu, X } from 'lucide-react'; // Optional: for hamburger icon, requires lucide-react
 
 function Navbar() {
-    const [toggle, setToggle] = useState(false)
-  return (
-    <nav class="md:w-full lg:w-full h-[68px] justify-around bg-linear-to-r from-sky-green to-summar-green items-center flex flex-row ">
-        <div class="lg:w-[79px] lg:h-[56px] md:w-[66px] md:[48px] sm:w-[55px] sm:[40px]">
-            <img src={logo} class="w-full h-full" alt="Crop-care logo"/>
-        </div>
+  const [toggle, setToggle] = useState(false);
 
-        <div class="lg:w-[605px] lg:h-[20px] md:w-[514px] md:w-[17px] items-center">
-            <ul class="flex flex-row justify-around">
-                <li><a class='' href="">STORAGE TIPS</a></li>
-                <li><a class='' href="">VIDEOS</a></li> 
-                <li><a class='' href="">STORAGE CENTERS</a></li>
-                <li><a class='' href="">NEWS</a></li>
-                <li><a class='' href="">ABOUT US</a></li>
-            </ul>
+  return (
+    <nav className="w-full bg-gradient-to-r from-sky-green to-summar-green px-6 py-4 flex items-center justify-between" >
+      
+      {/* Logo */}
+      <div className="w-[55px] sm:w-[66px] md:w-[79px]">
+        <img src={logo} className="w-full h-auto" alt="Crop-care logo" />
+      </div>
+
+      {/* Desktop Menu */}
+      <ul className="hidden md:flex space-x-6 text-sm font-medium text-gray-800">
+        <li><a href="#storagetips">STORAGE TIPS</a></li>
+        <li><a href="#storagecenters">STORAGE CENTERS</a></li>
+        <li><a href="#testimonials">NEWS</a></li>
+        <li><a href="#aboutus">ABOUT US</a></li>
+      </ul>
+
+      {/* Buttons (Desktop) */}
+      <div className="hidden md:flex items-center space-x-4">
+        <button className="bg-white text-green-800 px-4 py-2 rounded-full">Log In</button>
+        <button className="bg-green-900 text-white px-4 py-2 rounded-full">Register</button>
+      </div>
+
+      {/* Mobile Toggle Button */}
+      <div className="md:hidden">
+        <button onClick={() => setToggle(!toggle)} className="text-green-900">
+          {toggle ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {toggle && (
+        <div className="absolute top-[68px] left-0 w-full bg-white shadow-md md:hidden flex flex-col items-start p-6 space-y-4 z-50">
+          <a href="#">STORAGE TIPS</a>
+          <a href="">VIDEOS</a>
+          <a href="">STORAGE CENTERS</a>
+          <a href="">NEWS</a>
+          <a href="">ABOUT US</a>
+          <button className="w-full bg-green-100 text-green-800 py-2 rounded-full">Log In</button>
+          <button className="w-full bg-green-900 text-white py-2 rounded-full">Register</button>
         </div>
-        <div class="w-[272px] h-[48px] justify-between">
-            <button class="bg-transparent w-[132px] h-[48px] rounded-[48px] cursor-pointer">
-                <p>Log In</p>
-            </button>
-            <button class="cursor-pointer">
-                Register 
-            </button>
-        </div>
+      )}
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

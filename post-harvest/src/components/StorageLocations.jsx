@@ -10,7 +10,7 @@ import Chevron from '../assets/chevronRight.png'
 
 function StorageLocations() {
   return (
-    <section class=' flex flex-col justify-center items-center my-20'>
+    <section class=' flex flex-col justify-center items-center my-20' id='storagecenters'>
         <div class='flex justify-center'>
             <p class='text-[36px]'>Find Reliable Storage Near You!</p>
         </div>

@@ -20,7 +20,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-12 px-4 bg-white">
+    <section className="py-12 px-4 bg-white" id='testimonials'>
       <div className="max-w-6xl mx-auto text-center">
         <p className="text-green-500 font-semibold tracking-widest uppercase text-sm mb-2">
           Testimonials

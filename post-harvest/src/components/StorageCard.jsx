@@ -2,10 +2,25 @@ import { FaStar, FaRegStar } from 'react-icons/fa';
 import { FiMapPin } from 'react-icons/fi';
 import { BsBoxSeam } from 'react-icons/bs';
 
-export default function StorageCard({ imageUrl, title, rating, capacity, location }) {
-  // Generate full stars and empty stars based on rating
+export default function StorageCard({
+  imageUrl,
+  title,
+  rating,
+  capacity,
+  location,
+  phone = '+233279187945', // Default contact
+  mapLink = 'https://maps.google.com' // Default map link
+}) {
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating - fullStars >= 0.5;
+
+  const handleContact = () => {
+    window.location.href = `tel:${phone}`;
+  };
+
+  const handleDirections = () => {
+    window.open(mapLink, '_blank');
+  };
 
   return (
     <div className="bg-white rounded-2xl shadow-md overflow-hidden w-72">
@@ -41,11 +56,17 @@ export default function StorageCard({ imageUrl, title, rating, capacity, locatio
           {location}
         </div>
 
-        <button className="w-full bg-green-700 text-white py-2 rounded-full text-sm mb-2 hover:bg-green-800">
-          Contact Us 
+        <button
+          onClick={handleContact}
+          className="w-full bg-green-700 text-white py-2 rounded-full text-sm mb-2 hover:bg-green-800"
+        >
+          Contact Us
         </button>
-        
-        <button className="w-full border border-green-600 text-green-600 py-2 rounded-full text-sm hover:bg-green-50">
+
+        <button
+          onClick={handleDirections}
+          className="w-full border border-green-600 text-green-600 py-2 rounded-full text-sm hover:bg-green-50"
+        >
           Get Directions
         </button>
       </div>
